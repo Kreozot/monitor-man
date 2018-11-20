@@ -108,6 +108,8 @@ const _newman = {
           if (handler) {
             const handlerParams = JSON.parse(collectionInfo.handlerParams);
             const request = require('postman-request');
+            const Socks5HttpsAgent = require('socks5-https-client/lib/Agent');
+            const Socks5HttpAgent = require('socks5-http-client/lib/Agent');
             const sprintf = require("sprintf-js").sprintf;
             const vsprintf = require("sprintf-js").vsprintf;
             const redisClient = redis.getConn();
@@ -116,6 +118,8 @@ const _newman = {
               failures: _failures,
               redis: redisClient,
               request: request,
+              Socks5HttpsAgent: Socks5HttpsAgent,
+              Socks5HttpAgent: Socks5HttpAgent,
               date: date,
               sprintf: sprintf,
               vsprintf: vsprintf,
