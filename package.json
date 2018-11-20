@@ -31,6 +31,8 @@
     "postman-request": "^2.81.1-postman.2",
     "redis": "^2.7.1",
     "safe-eval": "^0.3.0",
+    "socks5-http-client": "^1.0.4",
+    "socks5-https-client": "^1.2.1",
     "sprintf-js": "^1.1.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

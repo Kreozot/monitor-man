@@ -70,6 +70,8 @@ router.post('/:id/debug', async function (ctx) {
   const code = ctx.checkBody('code').notEmpty().value;
   const handlerParams = {};
   const request = require('postman-request');
+  const Socks5HttpsAgent = require('socks5-https-client/lib/Agent');
+  const Socks5HttpAgent = require('socks5-http-client/lib/Agent');
   const sprintf = require("sprintf-js").sprintf;
   const vsprintf = require("sprintf-js").vsprintf;
   const redisClient = redis.getConn();
@@ -80,6 +82,8 @@ router.post('/:id/debug', async function (ctx) {
     failures: failures,
     redis: redisClient,
     request: request,
+    Socks5HttpsAgent: Socks5HttpsAgent,
+    Socks5HttpAgent: Socks5HttpAgent,
     date: date,
     sprintf: sprintf,
     vsprintf: vsprintf,
